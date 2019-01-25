@@ -7,7 +7,7 @@ var files = [
   './css/bulma.min.css',
   './css/bulma-carousel.css',
   './js/bulma.js',
-  '.images/*'
+  '.images/*.jpg'
 ];
 
 self.addEventListener('install', (event) => {
