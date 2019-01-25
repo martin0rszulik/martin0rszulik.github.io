@@ -7,7 +7,7 @@
     "theme_color": "#fff",
     "icons": [
       {
-        "src": "/homescreen.png",
+        "src": "/pepe/homescreen.png/",
         "sizes": "192x192",
         "type": "image/png"
       }
