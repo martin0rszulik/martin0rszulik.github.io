@@ -1,12 +1,12 @@
 var cacheName = 'hello-world-page';
 var files = [
-  '/',
-  '/index.html',
-  '/galerie.html',
-  '/kontakt.html',
-  '/css/bulma.min.css',
-  '/css/bulma-carousel.css',
-  '/js/bulma-carousel.min.js'
+  './',
+  './index.html',
+  './galerie.html',
+  './kontakt.html',
+  './css/bulma.min.css',
+  './css/bulma-carousel.css',
+  './js/bulma-carousel.min.js'
 ];
 
 self.addEventListener('install', (event) => {
