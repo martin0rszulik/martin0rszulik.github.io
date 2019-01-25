@@ -83,7 +83,7 @@
     </div>
   </footer>
   <script>
-    async function installServiceWorkerAsync() {
+    (async function installServiceWorkerAsync() {
     if ('serviceWorker' in navigator) {
         try {
             let serviceWorker = await navigator.serviceWorker.register('./sw.js')
@@ -92,7 +92,7 @@
             console.error(`Failed to register service worker: ${err}`)
         }
       }
-    }
+    })()
 
     document.addEventListener('DOMContentLoaded', () => {
 
