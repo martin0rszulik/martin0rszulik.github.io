@@ -2,8 +2,8 @@
     "name": "PePe - nábytek na míru",
     "short_name": "PePe",
     "lang": "cs",
-    "start_url": "/pepe/index.html",
-    "display": "standalone",
+    "start_url": "./index.html",
+    "display": "browser",
     "theme_color": "#fff",
     "icons": [
       {
