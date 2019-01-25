@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PePe">
+  <meta name="apple-mobile-web-app-title" content="PePe">
+  <meta name="theme-color" content="#fff">
+  <meta name="msapplication-navbutton-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="homescreen.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="homescreen.png">
+  <meta charset="utf-8">
+  <title>PePe - nábytek na míru</title>
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <nav class="navbar" style="height: 3.25rem" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand" style="max-height: 3.1rem;">
+        <a class="navbar-item" href="index.html">
+          <img src="pepe.png" style="max-height: 3.1rem;" />
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="https://www.facebook.com/pepevyrobanabytku/?tn-str=k*F" target="_blank">
+            <span class="icon is-medium">
+              <i class="fab fa-lg fa-facebook"></i>
+            </span>
+          </a>
+        </div>
+
+        <div class="navbar-end">
+          <a class="navbar-item">
+            o nás
+          </a>
+          <a class="navbar-item" href="galerie.html">
+            galerie
+          </a>
+          <a class="navbar-item" href="kontakt.html">
+            kontakt
+          </a>
+        </div>
+
+      </div>
+    </nav>
+    <section class="hero is-fullheight">
+      <div class="hero-body columns">
+        <div class="column is-three-fifths is-offset-one-fifth has-text-centered card card-content">
+          <p class="title is-1">
+            Výroba nábytku na míru
+          </p>
+          <p class="subtitle is-4">
+            Jsme firma která Vám na míru zhotoví nábytek dle Vašeho přání. Kuchyňské linky, lékárny, dětské pokoje,
+            obývací stěny, postele, kanceláře, atd...
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered is-small">
+      <p>
+        Built by <a href="https://github.com/martin0rszulik">Martin Orszulik</a>
+      </p>
+    </div>
+  </footer>
+  <script>
+    (async function installServiceWorkerAsync() {
+    if ('serviceWorker' in navigator) {
+        try {
+            let serviceWorker = await navigator.serviceWorker.register('/sw.js')
+            console.log(`Service worker registered ${serviceWorker}`)
+        } catch (err) {
+            console.error(`Failed to register service worker: ${err}`)
+        }
+      }
+    })();
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PePe">
+  <meta name="apple-mobile-web-app-title" content="PePe">
+  <meta name="theme-color" content="#fff">
+  <meta name="msapplication-navbutton-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="homescreen.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="homescreen.png">
+  <meta charset="utf-8">
+  <title>PePe - nábytek na míru</title>
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+</head>
+
+<body>
+  <style>
+    .map-responsive {
+      overflow: hidden;
+      padding-bottom: 56.25%;
+      position: relative;
+      height: 0;
+    }
+
+    .map-responsive iframe {
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  </style>
+
+  <div class="container">
+    <nav class="navbar" style="height: 3.25rem" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand" style="max-height: 3.1rem;">
+        <a class="navbar-item" href="index.html">
+          <img src="pepe.png" style="max-height: 3.1rem;" />
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="https://www.facebook.com/pepevyrobanabytku/?tn-str=k*F" target="_blank">
+            <span class="icon is-medium">
+              <i class="fab fa-lg fa-facebook"></i>
+            </span>
+          </a>
+
+        </div>
+
+        <div class="navbar-end">
+          <a class="navbar-item">
+            o nás
+          </a>
+          <a class="navbar-item" href="galerie.html">
+            galerie
+          </a>
+
+          <a class="navbar-item is-active">
+            kontakt
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          Naše telefoní číslo
+        </h1>
+        <p class="subtitle">
+          +420 <strong>603 290 894</strong>
+        </p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Otevírací doba:</h1>
+        <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+          <tr>
+            <th>Pondělí</th>
+            <th>7:00 - 14:30</th>
+          </tr>
+          <tr>
+            <th>Úterý</th>
+            <th>7:00 - 14:30</th>
+          </tr>
+          <tr>
+            <th>Středa</th>
+            <th>7:00 - 14:30</th>
+          </tr>
+          <tr>
+            <th>Čtvrtek</th>
+            <th>7:00 - 14:30</th>
+          </tr>
+          <tr>
+            <th>Pátek</th>
+            <th>7:00 - 14:30</th>
+          </tr>
+          <tr>
+            <th>Sobota</th>
+            <th>zavřeno</th>
+          </tr>
+          <tr>
+            <th>Neděle</th>
+            <th>zavřeno</th>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+
+        <h1 class="title">Kontakt</h1>
+        <h2 class="subtitle">
+          Můžete nás najít na této adrese:
+        </h2>
+        <div class="map-responsive">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2571.432371740013!2d18.53896221593758!3d49.87190643676196!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47115567e454cc0f%3A0xfdcaeee17f7ac120!2zUGVwZSB0cnVobMOhxZlzdHbDrSAtIHpha8OhemtvdsOhIHbDvXJvYmEgbsOhYnl0a3UgbmEgbcOtcnU!5e0!3m2!1scs!2scz!4v1548362368362"
+            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered is-small">
+      <p>
+        Built by <a href="https://github.com/martin0rszulik">Martin Orszulik</a>
+      </p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="manifest" href="manifest.json">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="PePe">
+  <meta name="apple-mobile-web-app-title" content="PePe">
+  <meta name="theme-color" content="#fff">
+  <meta name="msapplication-navbutton-color" content="#fff">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="homescreen.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="homescreen.png">
+  <meta charset="utf-8">
+  <title>PePe - nábytek na míru</title>
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma-carousel.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="js/bulma-carousel.min.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar" style="height: 3.25rem" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand" style="max-height: 3.1rem;">
+        <a class="navbar-item" href="index.html">
+          <img src="pepe.png" style="max-height: 3.1rem;" />
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="https://www.facebook.com/pepevyrobanabytku/?tn-str=k*F" target="_blank">
+            <span class="icon is-medium">
+              <i class="fab fa-lg fa-facebook"></i>
+            </span>
+          </a>
+
+        </div>
+
+        <div class="navbar-end">
+          <a class="navbar-item">
+            o nás
+          </a>
+          <a class="navbar-item is-active">
+            galerie
+          </a>
+
+          <a class="navbar-item" href="kontakt.html">
+            kontakt
+          </a>
+        </div>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Ukázky z naší práce</h1>
+        <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true">
+          <div class='carousel-container'>
+            <div class='carousel-item has-background is-active'>
+              <img class="is-background" src="images/1.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/2.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/3.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/4.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/5.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/6.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/7.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/8.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/9.jpg" alt="" width="750" height="375" />
+            </div>
+            <div class='carousel-item has-background'>
+              <img class="is-background" src="images/10.jpg" alt="" width="750" height="375" />
+            </div>
+          </div>
+          <div class="carousel-navigation is-overlay">
+            <div class="carousel-nav-left">
+              <i class="fa fa-chevron-left" aria-hidden="true"></i>
+            </div>
+            <div class="carousel-nav-right">
+              <i class="fa fa-chevron-right" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+
+    </section>
+  </div>
+  <footer class="footer">
+    <div class="content has-text-centered is-small">
+      <p>
+        Built by <a href="https://github.com/martin0rszulik">Martin Orszulik</a>
+      </p>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      var carousels = bulmaCarousel.attach();
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+
+        // Add a click event on each of them
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+
+          });
+        });
+      }
+
+    });
+  </script>
+</body>
+
+</html>
