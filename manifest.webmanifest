@@ -3,11 +3,11 @@
     "short_name": "PePe",
     "lang": "cs",
     "start_url": "index.html?utm_source=homescreen",
-    "scope": "pepe/"
+    "scope" : "./",
     "theme_color": "#fff",
     "icons": [
       {
-        "src": "pepe/homescreen.png",
+        "src": "./homescreen.png",
         "sizes": "192x192",
         "type": "image/png"
       }
