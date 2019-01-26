@@ -2,7 +2,7 @@
     "name": "PePe - nábytek na míru",
     "short_name": "PePe",
     "lang": "cs",
-    "start_url": "pepe/index.html?utm_source=homescreen",
+    "start_url": "index.html?utm_source=homescreen",
     "scope" : "./",
     "theme_color": "#fff",
     "icons": [
